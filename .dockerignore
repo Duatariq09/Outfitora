@@ -1,0 +1,9 @@
+.env
+.git
+data
+uploads
+node_modules
+*.db
+*.bat
+test.js
+test-tryon.js

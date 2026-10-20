@@ -1,0 +1,18 @@
+# Free demo on Render (https://render.com). The free plan forgets accounts, wardrobes and photos
+# whenever it restarts or sleeps, so use it for a demo only. Not tested here (no internet).
+services:
+  - type: web
+    name: outfitora
+    runtime: node
+    plan: free
+    buildCommand: echo "nothing to build"
+    startCommand: node start.js
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
